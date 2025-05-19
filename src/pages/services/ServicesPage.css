@@ -1,0 +1,336 @@
+/* Enhanced Services Page Styling */
+.page-banner {
+  background: linear-gradient(-45deg, #6a82fb, #fc5c7d, #43cea2, #185a9d);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  animation: float 6s ease-in-out infinite;
+}
+
+.shape1 { width: 100px; height: 100px; top: 20%; left: 10%; animation-delay: 0s; }
+.shape2 { width: 150px; height: 150px; top: 40%; right: 15%; animation-delay: 2s; }
+.shape3 { width: 80px; height: 80px; bottom: 20%; left: 20%; animation-delay: 1s; }
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.service-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #6a82fb;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+  color: #fc5c7d;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.process-timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.process-step {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.process-step:hover {
+  transform: translateX(10px);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  color: white;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: white;
+  color: #185a9d;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+  margin-bottom: 3rem;
+}
+
+.section-title h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.section-title h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #6a82fb, #fc5c7d);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
+.job-seekers-section {
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.job-seekers-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(106, 130, 251, 0.1), rgba(252, 92, 125, 0.1));
+  transform: skewY(-3deg);
+  transform-origin: top right;
+}
+
+.seeker-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.benefit-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  color: #6a82fb;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+  transform: scale(1.1);
+  color: #fc5c7d;
+}
+
+.benefit-card h4 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.benefit-card p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.highlight-text {
+  font-size: 1.25rem;
+  color: #185a9d;
+  font-weight: 500;
+  padding: 2rem;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(106, 130, 251, 0.1), rgba(252, 92, 125, 0.1));
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .seeker-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .highlight-text {
+    font-size: 1.1rem;
+    padding: 1.5rem;
+  }
+}
+
+.companies-section {
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.companies-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(67, 206, 162, 0.1), rgba(24, 90, 157, 0.1));
+  transform: skewY(3deg);
+  transform-origin: top left;
+}
+
+.company-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.company-card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 1px solid rgba(67, 206, 162, 0.1);
+}
+
+.company-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(24, 90, 157, 0.1);
+  border-color: rgba(67, 206, 162, 0.3);
+}
+
+.company-icon {
+  font-size: 2rem;
+  color: #43cea2;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.company-card:hover .company-icon {
+  transform: scale(1.1);
+  color: #185a9d;
+}
+
+.company-card h4 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.company-card p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.company-highlight {
+  background: linear-gradient(135deg, rgba(67, 206, 162, 0.1), rgba(24, 90, 157, 0.1));
+  color: #185a9d;
+}
+
+@media (max-width: 768px) {
+  .company-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+} 
